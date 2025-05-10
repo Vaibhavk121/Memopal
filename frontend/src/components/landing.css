@@ -14,6 +14,7 @@ body {
     overflow-y: auto;
     position: relative;
     scroll-behavior: smooth;
+    background-color: #000000;
 }
 
 /* Custom Glowing Scrollbar */
@@ -27,21 +28,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #00c6ff, #0072ff);
+    background: #555;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #0072ff, #00c6ff);
+    background: #777;
 }
 
 /* Background Gradient Animation */
 .landing-container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
-    background-size: 400% 400%;
-    animation: gradientFlow 15s ease infinite;
+    background: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: center;
