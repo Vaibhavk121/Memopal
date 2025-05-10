@@ -1,0 +1,341 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.signup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 100vw;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.signup-container::before {
+    display: none;
+}
+
+.signup-card {
+    display: flex;
+    background: radial-gradient(ellipse at 30% 20%, #183b5a 0%, #181c24 60%, #10131a 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    min-height: 520px;
+    z-index: 1;
+}
+
+.signup-form-section {
+    flex: 1 1 0;
+    padding: 48px 36px 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    min-width: 340px;
+}
+
+.signup-logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.signup-logo img {
+    /* No glow */
+}
+
+.signup-logo::after {
+    /* Remove the .signup-logo::after pseudo-element */
+}
+
+.signup-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.signup-subtitle {
+    font-size: 1rem;
+    color: #b0b8c1;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.signup-label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+    text-align: left;
+    width: 100%;
+}
+
+.signup-input {
+    background: #232b36;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 48px 13px 16px;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 0px;
+    outline: none;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.18);
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.signup-input:focus {
+    box-shadow: 0 0 0 2px #00c6fb44;
+}
+
+.signup-password-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.signup-password-row .signup-input {
+    margin-bottom: 0;
+    padding-right: 48px;
+}
+
+.signup-faceid-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border-radius: 8px;
+    padding: 0;
+    height: 28px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.signup-faceid-icon:hover {
+    background: #00c6fb22;
+}
+
+.signup-faceid-icon svg {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+.signup-continue-btn {
+    background: linear-gradient(90deg, #0a4e7a 0%, #00c6fb 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 0;
+    margin: 22px 0 0 0;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px 0 rgba(0, 198, 251, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    letter-spacing: 0.01em;
+}
+
+.signup-continue-btn:hover {
+    background: linear-gradient(90deg, #00c6fb 0%, #0a4e7a 100%);
+}
+
+.signup-arrow {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.signup-signin-link {
+    margin-top: 16px;
+    text-align: center;
+    color: #b0b8c1;
+    font-size: 0.95rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-link {
+    color: #00c6fb;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: text-decoration 0.2s;
+    font-size: 0.95rem;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.signup-illustration-section {
+    flex: 1 1 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    padding: 0 24px;
+}
+
+.signup-illustration-img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: illustration-float 3.5s ease-in-out infinite alternate, illustration-fadein 1.2s cubic-bezier(0.4, 0, 0.2, 1) 1;
+}
+
+@keyframes illustration-float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-32px);
+    }
+}
+
+@keyframes illustration-fadein {
+    0% {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 900px) {
+    .signup-card {
+        flex-direction: column;
+        max-width: 420px;
+        min-height: unset;
+    }
+
+    .signup-illustration-section {
+        min-width: unset;
+        padding: 32px 0 0 0;
+    }
+
+    .signup-illustration-img {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup-form-section {
+        padding: 32px 10px 24px 10px;
+        min-width: unset;
+    }
+
+    .signup-card {
+        border-radius: 12px;
+        min-width: unset;
+    }
+}
+
+.faceid-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 10px 0;
+}
+
+.faceid-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(24, 60, 90, 0.18);
+    border: 1.5px solid #00c6fb44;
+    border-radius: 14px;
+    padding: 18px 32px 14px 32px;
+    box-shadow: 0 2px 12px 0 rgba(0, 198, 251, 0.10);
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    outline: none;
+}
+
+.faceid-btn:hover {
+    background: rgba(0, 198, 251, 0.10);
+    border: 1.5px solid #00c6fb;
+}
+
+.faceid-icon-large {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faceid-icon-large svg {
+    /* No animation */
+}
+
+.faceid-label {
+    color: #00c6fb;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+}

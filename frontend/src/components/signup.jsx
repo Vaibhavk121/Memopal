@@ -1,9 +1,9 @@
 import React from 'react';
 import './signup.css';
-import signIn from '../assets/images/signIn.svg';
+import signUp from '../assets/images/signUp.svg';
 import logo from '../assets/images/logo.png';
 
-const SignIn = () => {
+const Signup = () => {
     return (
         <div className="signup-container">
             <div className="signup-card">
@@ -11,8 +11,8 @@ const SignIn = () => {
                     <div className="signup-logo">
                         <img src={logo} alt="Logo" style={{ width: 48, height: 48 }} />
                     </div>
-                    <h2 className="signup-title">Sign in to MemoPal</h2>
-                    <p className="signup-subtitle">Welcome back! Please sign in to continue</p>
+                    <h2 className="signup-title">Create your account</h2>
+                    <p className="signup-subtitle">Welcome! Please fill in the details to get started.</p>
                     <form className="signup-form">
                         <label className="signup-label" htmlFor="email">Email address</label>
                         <input className="signup-input" type="email" id="email" placeholder="Enter your email address" />
@@ -33,21 +33,21 @@ const SignIn = () => {
                                         <rect x="14" y="7" width="12" height="5" rx="2.5" fill="url(#cameraGradientLarge)" />
                                     </svg>
                                 </span>
-                                <span className="faceid-label">Sign in with Face ID</span>
+                                <span className="faceid-label">Sign up with Face ID</span>
                             </button>
                         </div>
                         <button className="signup-continue-btn" type="submit">Continue</button>
                     </form>
                     <div className="signup-signin-link">
-                        Don't have an account? <a href="#" className="signup-link">Sign up</a>
+                        Already have an account? <a href="#" className="signup-link">Sign In</a>
                     </div>
                 </div>
                 <div className="signup-illustration-section">
-                    <img src={signIn} alt="Illustration" className="signup-illustration-img" />
+                    <img src={signUp} alt="Illustration" className="signup-illustration-img" />
                 </div>
             </div>
         </div>
     );
 };
 
-export default SignIn;
+export default Signup;
