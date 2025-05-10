@@ -1,5 +1,9 @@
 @import './assets/fonts.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: var(--font-primary);
   line-height: 1.5;
