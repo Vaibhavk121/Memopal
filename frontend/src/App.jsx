@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './components/Landing';
+import SignIn from './components/sign-in';
+import Signup from './components/signup';
 import './App.css'
 // import Signup from './components/signup'
 //import SignIn from './components/sign-in'
 //import ManageAccounts from './components/ManageAccounts'
-import Landing from './components/Landing'
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
   return (
-    <>
-      <Landing />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

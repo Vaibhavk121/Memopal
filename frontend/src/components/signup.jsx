@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './signup.css';
 import signUp from '../assets/images/signUp.svg';
 import logo from '../assets/images/logo.png';
@@ -9,7 +10,9 @@ const Signup = () => {
             <div className="signup-card">
                 <div className="signup-form-section">
                     <div className="signup-logo">
-                        <img src={logo} alt="Logo" style={{ width: 48, height: 48 }} />
+                        <Link to="/">
+                            <img src={logo} alt="Logo" style={{ width: 48, height: 48 }} />
+                        </Link>
                     </div>
                     <h2 className="signup-title">Create your account</h2>
                     <p className="signup-subtitle">Welcome! Please fill in the details to get started.</p>
@@ -39,7 +42,7 @@ const Signup = () => {
                         <button className="signup-continue-btn" type="submit">Continue</button>
                     </form>
                     <div className="signup-signin-link">
-                        Already have an account? <a href="#" className="signup-link">Sign In</a>
+                        Already have an account? <Link to="/signin" className="signup-link">Sign In</Link>
                     </div>
                 </div>
                 <div className="signup-illustration-section">
